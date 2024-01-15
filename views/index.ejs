@@ -1,0 +1,92 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image to tXt Converter</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "rejouice headline";
+      }
+      body {
+        background-color: #f5f5f5;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+      body:hover {
+        background-color: darkgrey;
+      }
+
+      form {
+        text-align: center;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        max-width: 400px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+      form:hover {
+        background-color: rgb(215, 255, 170);
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      footer {
+        text-align: center;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <form
+      id="form"
+      action="/upload"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <h1>Image to tXt Converter</h1>
+      <input type="file" name="avatar" />
+      <br />
+      <button type="submit">Convert</button>
+    </form>
+
+    <footer>&copy; 2024 Image to tXt Converter</footer>
+  </body>
+</html>
